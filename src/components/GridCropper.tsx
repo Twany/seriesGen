@@ -129,17 +129,17 @@ export default function GridCropper({ imageUrl, rows, cols, expectedCount, onCom
   };
 
   return (
-    <div className="flex flex-col h-full w-full bg-[#111] border border-white/5 relative">
+    <div className="flex flex-col h-full w-full bg-gray-100 dark:bg-[#111] border border-black/5 dark:border-white/5 relative">
       {/* Header */}
-      <div className="h-16 flex items-center justify-between px-6 shrink-0 border-b border-white/10 bg-[#0a0a0a]">
+      <div className="h-16 flex items-center justify-between px-6 shrink-0 border-b border-black/10 dark:border-white/10 bg-white dark:bg-[#0a0a0a]">
         <div>
-          <h3 className="text-sm font-bold text-[#CBFF00] uppercase tracking-widest">Alignment Tool</h3>
-          <p className="text-[10px] text-white/50 uppercase tracking-wider">Drag and resize individual boxes to isolate content.</p>
+          <h3 className="text-sm font-bold text-lime-600 dark:text-[#CBFF00] uppercase tracking-widest">Alignment Tool</h3>
+          <p className="text-[10px] text-gray-600 dark:text-white/50 uppercase tracking-wider">Drag and resize individual boxes to isolate content.</p>
         </div>
         <div className="flex gap-4">
           <button 
             onClick={onCancel}
-            className="text-xs uppercase font-bold tracking-widest text-white/60 hover:text-white"
+            className="text-xs uppercase font-bold tracking-widest text-white/60 hover:text-gray-900 dark:text-white"
           >
             Cancel
           </button>
@@ -223,7 +223,7 @@ export default function GridCropper({ imageUrl, rows, cols, expectedCount, onCom
                 onPointerDown={(e) => handlePointerDown(e, i, 'se')}
               />
               
-              <div className="absolute top-1 left-1 bg-black/50 text-[#CBFF00] text-[8px] font-mono px-1 rounded-sm pointer-events-none">
+              <div className="absolute top-1 left-1 bg-black/50 text-lime-600 dark:text-[#CBFF00] text-[8px] font-mono px-1 rounded-sm pointer-events-none">
                 {box.id + 1}
               </div>
             </div>
